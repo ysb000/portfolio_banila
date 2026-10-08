@@ -1,0 +1,73 @@
+/* index.css */
+/* =================================================================1행 헤더 */
+header {}
+/* 헤더 왼쪽 영역 로고 + 메뉴 */
+/* 로고 */
+header .logo_menu_wrap {}
+header .logo_menu_wrap .logo {}
+header .logo_menu_wrap .logo a {}
+header .logo_menu_wrap .logo a img {}
+/* 메뉴 */
+header .logo_menu_wrap .menu {}
+header .logo_menu_wrap .menu a {}
+/* shop 메뉴 호버 시 전체 메뉴 */
+header .logo_menu_wrap .menu a:nth-child(1) .all_menu {}
+/* 헤더 오른쪽 영역 유틸 메뉴 */
+header .util_menu_wrap {}
+header .util_menu_wrap a {}
+/* 서치 오버 시 나오는 화면 */
+header .util_menu_wrap a:nth-child(1) .search_wrap{}
+/* 폼 태그 */
+header .util_menu_wrap a:nth-child(1) .search_wrap form {}
+header .util_menu_wrap a:nth-child(1) .search_wrap form #search_txt {}
+header .util_menu_wrap a:nth-child(1) .search_wrap form #search_txt::placeholder {}
+header .util_menu_wrap a:nth-child(1) .search_wrap form #search_btn {}
+/* 인기 검색어 */
+header .util_menu_wrap a:nth-child(1) .search_wrap .popular_search {}
+header .util_menu_wrap a:nth-child(1) .search_wrap .popular_search h3 {}
+header .util_menu_wrap a:nth-child(1) .search_wrap .popular_search .popular_terms {}
+header .util_menu_wrap a:nth-child(1) .search_wrap .popular_search .popular_terms a {}
+/* 최근 검색어 */
+header .util_menu_wrap a:nth-child(1) .search_wrap .recent_search {}
+header .util_menu_wrap a:nth-child(1) .search_wrap .recent_search .recent_title {}
+header .util_menu_wrap a:nth-child(1) .search_wrap .recent_search .recent_title h3 {}
+header .util_menu_wrap a:nth-child(1) .search_wrap .recent_search .recent_title a {}
+header .util_menu_wrap a:nth-child(1) .search_wrap .recent_search .recent_terms {}
+header .util_menu_wrap a:nth-child(1) .search_wrap .recent_search .recent_terms li {}
+header .util_menu_wrap a:nth-child(1) .search_wrap .recent_search .recent_terms li a {}
+header .util_menu_wrap a:nth-child(1) .search_wrap .recent_search .recent_terms li .close_btn {}
+header .util_menu_wrap a:nth-child(1) .search_wrap .recent_search .recent_terms li .close_btn img{}
+/* 계정 */
+header .util_menu_wrap a:nth-child(2) .account_wrap {} 
+header .util_menu_wrap a:nth-child(2) .account_wrap a {}
+/* 장바구니 */ 
+header .util_menu_wrap a:nth-child(3) span {} 
+/* =================================================================2행 메인 배너 */
+main {}
+/* 스와이퍼 prev, next 버튼 */
+main .main_bnr  .main_prev_btn {}
+main .main_bnr  .main_next_btn {}
+/* swiper */
+main .main_bnr {}
+main .main_bnr .swiper-wrapper{}
+main .main_bnr .swiper-wrapper .swiper-slides{}
+/* bnr 공통 */
+main .main_bnr .swiper-wrapper .swiper-slides h1 {}
+main .main_bnr .swiper-wrapper .swiper-slides .view_bnt {}
+/* bnr 개별 */
+/* bnr1 */
+main .main_bnr .swiper-wrapper .bnr1{}
+main .main_bnr .swiper-wrapper .bnr1 h1{}
+main .main_bnr .swiper-wrapper .bnr1 h1 .view_bnt{}
+/* bnr2 */
+main .main_bnr .swiper-wrapper .bnr2{}
+main .main_bnr .swiper-wrapper .bnr2 h1 p{}
+main .main_bnr .swiper-wrapper .bnr2 h1{}
+main .main_bnr .swiper-wrapper .bnr2 h1 .view_bnt{}
+/* =================================================================3행 액티비티 카테고리 */
+
+/* =================================================================4행 베스트 아이템 */
+/* =================================================================5행 핫 딜 */
+/* =================================================================6행 온라인 온리 */
+/* =================================================================7행 룩북 */
+/* =================================================================8행 풋터 */

@@ -19,6 +19,13 @@
     <link rel="stylesheet" href="./styles/var.css">
     <!-- js -->
     <script src="./scripts/index.js"defer></script>
+    <!-- swiper -->
+    <!--swiper 필수 css cdn 연결-->
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<!--swiper 필수 JS cdn 연결-->
+	<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <!-- 1행 헤더 -->
@@ -27,7 +34,12 @@
         <div class="logo_menu_wrap">
             <h1 class="logo"><a href="index.html"><img src="#" alt="바닐라코"></a></h1>
             <div class="menu">
-                <a href="#">SHOP</a>
+                <a href="#">
+                    SHOP
+                    <div class="all_menu">
+                        <!-- js 추가 -->
+                    </div>
+                </a>
                 <a href="#">BEST</a>
                 <a href="#">EVENT</a>
                 <a href="#">SAMPLING</a>
@@ -35,21 +47,65 @@
         </div>
         <!-- 유틸 메뉴 - 헤더 오른쪽 영역 -->
         <div class="util_menu_wrap">
-            <a href="#">SEARCH</a>
-            <a href="#">ACCOUNT</a>
+            <!-- 검색 -->
+            <a href="#">
+                SEARCH
+                <!-- 서치 클릭 시 나오는 화면 -->
+                <div class="search_wrap">
+                    <!-- 검색 -->
+                    <form action="#" method="get" name="search_frm">
+                        <input type="text" name="search_txt" id="search_txt" placeholder="검색어를 입력해주세요.">
+                        <button type="button" id="search_btn"><img src="#" alt="검색하기"></button>
+                    </form>
+                    <!-- 인기 검색어 -->
+                    <div class="popular_search">
+                        <h3>인기 검색어</h3>
+                        <div class="popular_terms">
+                            <a href="#">블러 팟</a>
+                            <a href="#">클렌징 밤</a>
+                            <a href="#">틴트</a>
+                        </div>
+                    </div>
+                    <!-- 최근 검색어 -->
+                    <div class="recent_search">
+                        <div class="recent_title">
+                            <h3>최근 검색어</h3>
+                            <a href="#">최근 검색어 삭제</a>
+                        </div>
+                        <ul class="recent_terms">
+                            <li>
+                                <a href="#">클렌징 밤</a>
+                                <button type="button" class="close_btn"><img src="#" alt=""></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+            <!-- 계정 -->
+            <a href="#">
+                ACCOUNT
+                <div class="account_wrap">
+                    <a href="#">JOIN</a>
+                    <a href="#">LOGIN</a>
+                    <a href="#">MY PAGE</a>
+                </div>
+            </a>
+            <!-- 장바구니 -->
             <a href="#">CART<span>0</span></a>
         </div>
     </header>
     <main>
         <!-- 2행 메인 배너 -->
         <div class="swiper main_bnr">
+            <div class="swiper-button-prev main_prev_btn"></div>
+            <div class="swiper-button-next main_next_btn"></div>
             <div class="swiper-wrapper">
-                <div class="swiper-slides bnr1">
+                <div class="swiper-slide bnr1">
                     <!--  img 백그라운드 -->
                     <h1>SHEER BLUR POT</h1>
                     <button type="button" class="view_bnt">view more</button>
                 </div>
-                <div class="swiper-slides bnr2">
+                <div class="swiper-slide bnr2">
                     <!--  img 백그라운드 -->
                     <p>MLB x Banila Co</p>
                     <h1>Cream Glaze Edition</h1>
@@ -95,7 +151,7 @@
             </div>
             <ul class="hotdeal_product_wrap">
                 <li><a href="#">
-                    <p class="img"><!-- 백그라운드 --></p>
+                    <p class="img"><img src="#" alt=""></p>
                     <div class="product_info">
                         <p class="product_name">클린 잇 제로 버블 클렌저 300ml</p>
                         <p class="product_desc">여린 피부를 위한 자극제로 클렌징</p>
@@ -107,7 +163,7 @@
                     </div>
                 </a></li>
                 <li><a href="#">
-                    <p class="img"><!-- 백그라운드 --></p>
+                    <p class="img"><img src="#" alt=""></p>
                     <div class="product_info">
                         <p class="product_name">로맨틱 블러쉬 컨투어 2colora</p>
                         <p class="product_desc">턱, 굉뎅, 콧대 자연스럽게 살아나는 윤곽</p>
@@ -119,7 +175,7 @@
                     </div>
                 </a></li>
                 <li><a href="#">
-                    <p class="img"><!-- 백그라운드 --></p>
+                    <p class="img"><img src="#" alt=""></p>
                     <div class="product_info">
                         <p class="product_name">쉬어 벨벳 베일 틴트 13Colors</p>
                         <p class="product_desc">구름결 같은 보송밀차 #벨벳틴트</p>
@@ -135,12 +191,16 @@
         <!-- 6행 온라인 온리-->
         <section class="online_product_wrap">
             <h2>ONLINE ONLY</h2>
+            <!-- 상품 탭 -->
             <div class="online_tab_wrap">
                 <a href="#" class="cleansing_tab">Cleansing</a>
                 <a href="#" class="makeup_tab">Make up</a>
                 <a href="#" class="mini_tab">Mini</a>
             </div>
+            <!-- 상품 영역 -->
             <div class="swiper online_swiper">
+                <div class="swiper-button-prev online_prev_btn"></div>
+                <div class="swiper-button-next online_next_btn"></div>
                 <div class="swiper-wrapper">
                     <!-- js 작성 -->
                 </div>
@@ -152,12 +212,115 @@
             <h2>LOOKBOOK</h2>
             <p class="content">영상에서 실제 사용한 제품을 만나보세요.</p>
             <div class="look_video_product_wrap">
+                <!-- 영상 -->
+                <iframe width="1337" height="752" src="https://www.youtube.com/embed/JZH05UctUMU?playlist=JZH05UctUMU&autoplay=1&loop=1&mute=1" title="Sheer Blur Pot with BABYMONSTER" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- 상품영역 -->
                 <ul class="product_wrap">
-                    <li></li>
+                    <li>
+                        <a href="#">
+                            <p><img src="#" alt=""></p>
+                            <div class="product_info">
+                                <p class="product_name">쉬어 블러 팟(9colors)</p>
+                                <p class="product_desc">닿는 순간 녹아드는 #에어블러</p>
+                                <div class="product_price">
+                                    <del class="original_price">18,000원</del>
+                                    <!-- <span class="sale_price"></span>
+                                    <span class="rate"></span> -->
+                                </div>
+                                <button type="button" class="wish_btn"><img src="#" alt=""></button>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><img src="#" alt=""></p>
+                            <div class="product_info">
+                                <p class="product_name">커버리셔스 얼티밋 화이트 쿠션 본품(7colors)</p>
+                                <p class="product_desc">가벼운 에어리 텍스처 </p>
+                                <div class="product_price">
+                                    <del class="original_price">30,000원</del>
+                                    <!-- <span class="sale_price"></span>
+                                    <span class="rate"></span> -->
+                                </div>
+                                <button type="button" class="wish_btn"><img src="#" alt=""></button>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><img src="#" alt=""></p>
+                            <div class="product_info">
+                                <p class="product_name">듀 부스트 메이크업 세럼 300ml</p>
+                                <p class="product_desc">MD 추천! 화잘먹 치트키</p>
+                                <div class="product_price">
+                                    <del class="original_price">26,000원</del>
+                                    <!-- <span class="sale_price">9,900원</span>
+                                    <span class="rate">45%</span> -->
+                                </div>
+                                <button type="button" class="wish_btn"><img src="#" alt=""></button>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><img src="#" alt=""></p>
+                            <div class="product_info">
+                                <p class="product_name">스머징 립 펜슬 (12colors)</p>
+                                <p class="product_desc">NEW 컬러 출시! SNS에서 소문난 오버립 펜슬! </p>
+                                <div class="product_price">
+                                    <del class="original_price">14,000원</del>
+                                    <!-- <span class="sale_price">9,900원</span>
+                                    <span class="rate">45%</span> -->
+                                </div>
+                                <button type="button" class="wish_btn"><img src="#" alt=""></button>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </section>    
     </main>
     <!-- 8행 풋터 -->
+    <footer>
+        <div class="qr_num_wrap">
+            <div class="qr_wrap">
+                <p><img src="#" alt="바닐라코 어플 다운로드 받기"></p>
+                <p>MOBILE APP DOWN LOAD</p>
+                <p>바닐라닷컴을 모바일 앱으로 만나보세요</p>
+            </div>
+            <div class="num_wrap">
+                <h3>고객센터</h3>
+                <p class="num">080-225-6500</p>
+                <p class="time">
+                    <span>평일 AM 9:00 ~ PM 6:00</span>
+                    <span>(점심시간 PM 12:00 ~ 1:00)</span>
+                </p>
+            </div>
+        </div>
+        <div class="company_sns_info_wrap">
+            <div class="company_sns">
+                <a href="#" class="facebook"><img src="#" alt=""></a>
+                <a href="#" class="instagram"><img src="#" alt=""></a>
+                <a href="#" class="youtube"><img src="#" alt=""></a>
+            </div>
+            <div class="footer_menu">
+                <a href="#">공지사항</a>
+                <a href="#">FAQ</a>
+                <a href="#">1:1 문의</a>
+            </div>
+            <div class="footer_links">
+                <a href="#">서비스 이용약관</a>
+                <span>|</span>
+                <a href="#">개인정보처리방침</a>
+                <span>|</span>
+                <a href="#">이용약관</a>
+                <span>|</span>
+                <a href="#">사업자 정보</a>
+            </div>
+            <p class="company_info">
+                (주)에프앤코 | 대표 김승범 | 사업자등록번호 214-86-49402 <a href="#">사업자정보확인</a> |통신판매업번호 2012-서울강남-03252 | 서울 강남 테헤란로8길 8, 5층(역삼동)| 이메일 : banila@banila.com | 해외 수출문의 business_inquiry@fnfcorp.com | © F&Co.Co.Ltd ALL Right Reserved
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
