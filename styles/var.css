@@ -1,0 +1,33 @@
+/* var.css */
+:root {
+    /* Font Size */
+    --font-size-title: 50px; /* 섹션 이름 */
+    --font-size-num: 24px; 
+    --font-size-l: 18px;
+    --font-size-m: 16px;
+    --font-size-s: 14px;
+    --font-size-xs: 12px;
+
+    /* Line Height */
+    --line-height: 1.5;
+
+    /* Font Weight - Pretendard */
+    --font-weight-el: 200;
+    --font-weight-li: 300;
+    --font-weight-me: 500;
+    
+    /* color */
+    --color-primary:#f9bbc4; /* 포인트 */
+    --color-emphasis:#ff4c66; /* 할인, 디데이 */
+
+    --gray-bg: #F0F0F0;       /* 회색 배경 */
+    --gray-light: #D5D5D5;    /* 연한 회색 */
+    --gray-medium: #A9A9A9;   /* 중간 회색 */
+    --gray-dark: #666666;     /* 진한 회색 */
+    /* spacing */
+    --spacing-xs: 10px;
+    --spacing-s: 15px;
+    --spacing-m: 20px;
+    --spacing-l: 40px;
+    --spacing-xl: 60px;
+}
